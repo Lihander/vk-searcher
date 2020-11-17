@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <span class="bg"></span>
     <v-main>
       <v-container fill-height>
         <nuxt />
