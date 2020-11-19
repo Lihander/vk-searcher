@@ -1,4 +1,5 @@
 import { Store } from 'vuex';
+import createPersistedState from 'vuex-persistedstate'
 
 const store = () => new Store({
   state: {
@@ -31,7 +32,9 @@ const store = () => new Store({
 
       context.commit('setNews', result.data.response);
     }
-  }
+  },
+
+  plugins: [createPersistedState()]
 });
 
 export default store;

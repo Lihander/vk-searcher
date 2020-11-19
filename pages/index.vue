@@ -37,7 +37,9 @@ export default {
   },
   methods: {
     async getNews() {
-      this.$router.push({path: '/news', query: {search: this.search}});
+      if (this.search) {
+        this.$router.push({path: '/news', query: {search: this.search}});
+      }
     }
   }
 }
